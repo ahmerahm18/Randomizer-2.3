@@ -70,11 +70,6 @@ function loaded() {
   song.play();
 }
 
-function draw() {
-  //noFill();
-
-}
-
 function randomizer() {
   background(0);
   if (songs[0]) {
