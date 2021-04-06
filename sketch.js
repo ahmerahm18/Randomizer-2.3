@@ -34,6 +34,7 @@ let counter = 0;
 var song;
 let cover = [];
 let randoHolder;
+let button;
 
 function preload() {
   song = loadSound("Xeuphoria.mp3", loaded);
@@ -55,6 +56,9 @@ function setup() {
 
   textSize(32);
 
+  button = createButton("Show a new Songs");
+  button.mousePressed(buttonPressed);
+
   fill(255)
   text("Welcome to the song generator!!", 120, 300);
   push();
@@ -73,9 +77,9 @@ function loaded() {
 function randomizer() {
   background(0);
   if (songs[0]) {
-    if (counter <= songs.length*2) {
+    if (counter <= songs.length * 2) {
       rando = int(random(9));
-      if(randoHolder == rando){
+      if (randoHolder == rando) {
         textSize(12);
         fill(255);
         text("This is a repeat of the last entry.", 250, 590);
@@ -110,7 +114,7 @@ function randomizer() {
   }
 }
 
-function mousePressed() {
+function buttonPressed() {
   animating = true;
   if (counter == 0) {
     setTimeout(randomizer, 2800);
