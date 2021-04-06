@@ -41,7 +41,7 @@ function preload() {
 
   //order is the order of the songs in the songs array
   for (let i = 0; i <= 8; i++) {
-    cover[i] = loadImage(`covers/cover_${i}.JPG`);
+    cover[i] = loadImage(`covers/cover${i}.JPG`);
   }
 }
 
